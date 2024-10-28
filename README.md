@@ -16,10 +16,33 @@ This datapack enhances Minecraft by introducing a leveling system where players 
 
 ## How to Use
 - Play the game and complete tasks to earn experience.
-- Level up by reaching the required criteria.
-- Check your progress via Minecraft advancements.
+- Progress is tracked using a score named `playerprogress` which increases when you kill mobs.
+- Display your progress using `/trigger gui`.
 
-## Support
-For any issues or feedback, please contact [your contact information].
+## Development Progress
 
-Thanks for using PlayerProgress!
+### Step 1: Folder Structure
+- Created the base folder `playerprogress`.
+- Created necessary subfolders including `functions` and `tags/functions`.
+
+### Step 2: `load.mcfunction`
+- Created a function to initialize scoreboard objectives for the `gui` trigger and `playerprogress` score.
+
+### Step 3: `increase_progress.mcfunction`
+- Set up a function to increase `playerprogress` score (later integrated into mob kill advancements).
+
+### Step 4: `gui.mcfunction`
+- Created a function to display the player progress GUI based on the `playerprogress` score.
+
+### Step 5: Mob Kill Score Increase
+- Created an advancement and function to increase `playerprogress` score when a mob is killed.
+
+## Extra Step: Setting Up GUI to Increment Player Level
+
+### Step 6: Setting Up Level Progresser
+
+#### Create `progresser.mcfunction`:
+- Navigate to `playerprogress/data/playerprogress/functions`.
+- Create a new file named `progresser.mcfunction`.
+
+### Content of `progresser.mcfunction`:
